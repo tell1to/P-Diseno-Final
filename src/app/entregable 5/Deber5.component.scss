@@ -1,0 +1,178 @@
+/* Estilos generales del producto */
+.product-item {
+  position: relative;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco suave */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8px;
+
+  button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1e90ff, #00bfff); /* Gradiente azul */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+  }
+
+  /* Efecto hover para la tarjeta */
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .product-detail {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2d3436; /* Gris oscuro */
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #636e72; /* Gris medio */
+      margin-bottom: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center; /* Centrado de los botones */
+      gap: 10px;
+
+      .p-button {
+        margin-top: 0.5rem;
+        padding: 10px;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 25px;
+        background-color: #00cec9; /* Verde azulado */
+        transition: background-color 0.2s ease;
+
+        &.p-button-outlined {
+          background-color: transparent;
+          border: 2px solid #00cec9;
+          color: #00cec9;
+        }
+
+        &.p-button-rounded {
+          border-radius: 25px;
+        }
+
+        &:hover {
+          background-color: #00b894; /* Verde más oscuro */
+          border-color: #00b894;
+        }
+      }
+
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .stock-status {
+      display: flex;
+      justify-content: flex-start; /* Alineación a la izquierda */
+      margin-top: 10px;
+      font-weight: bold;
+      color: #636e72; /* Gris medio */
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Carrusel responsivo */
+.p-carousel {
+  display: flex;
+  justify-content: center; /* Centrado del carrusel */
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0 auto; /* Centrado automático */
+}
+
+.p-carousel-item {
+  width: 100%;
+  max-width: 350px; /* Máximo ancho para los ítems */
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  margin: 0 10px;
+}
+
+.p-carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Botones de navegación del carrusel */
+.p-carousel .p-carousel-prev,
+.p-carousel .p-carousel-next {
+  color: #2d3436; /* Gris oscuro */
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(108, 92, 231, 0.1); /* Fondo púrpura claro */
+  }
+}
+
+/* Indicadores del carrusel */
+.p-carousel-indicators {
+  position: absolute;
+  bottom: 10px; /* Separación de los indicadores */
+  width: 50%;
+  display: flex;
+  justify-content: center; /* Centrado de los indicadores */
+  padding: 0;
+  margin: 0;
+}
+
+.p-carousel-indicator {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px;
+  border-radius: 50%;
+  background-color: #dfe6e9; /* Gris claro */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #6c5ce7; /* Púrpura brillante */
+  }
+
+  &.p-highlight {
+    background-color: #6c5ce7; /* Púrpura activo */
+  }
+}

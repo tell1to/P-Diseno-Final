@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  height: 100vh;  /* Asegúrate de que el cuerpo ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;  /* Alinea todo hacia la izquierda */
+  background-color: #f3f8fb; /* Azul claro */
+  position: relative;  /* Necesario para posicionar la imagen del gato */
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #005b96; /* Azul oscuro */
+  text-align: center;
+  margin-top: 100px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;  /* Cambiar la dirección a columna para que los botones estén uno encima del otro */
+  gap: 15px;
+  justify-content: flex-start;  /* Alinea los botones hacia el principio del contenedor */
+  align-items: center;
+  padding: 20px;
+  position: absolute;  /* Esto hace que los botones estén posicionados independientemente del flujo del contenido */
+  left: 20px;  /* Establece la distancia desde el borde izquierdo */
+  top: 150px;  /* Establece la distancia desde la parte superior */
+}
+
+button {
+  padding: 35px 35px;
+  background-color: #dbe9f1; /* Azul suave */
+  color: #014f86; /* Azul profundo */
+  border: 2px solid #0077b6; /* Borde azul medio */
+  border-radius: 100%; 
+  cursor: pointer;
+  font-size: 20px; 
+  font-weight: bold; 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #b0d6ec; /* Azul más claro */
+  border-color: #0096c7; /* Azul más oscuro */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #0077b6; /* Azul medio */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del gato */
+.cat-image {
+  position: absolute;
+  top: 50%;  /* Centra la imagen verticalmente */
+  left: 50%;  /* Centra la imagen horizontalmente */
+  transform: translate(-50%, -50%);  /* Ajusta para que la imagen esté completamente centrada */
+  width: 300px;  /* Tamaño de la imagen */
+  height: auto;  /* Mantiene la proporción original */
+}

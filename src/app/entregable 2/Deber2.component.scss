@@ -1,0 +1,13 @@
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #b0e3f5, #91d1f0); /* Gradiente azul suave */
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(144, 202, 249, 0.3); /* Sombra azul clara */
+}
